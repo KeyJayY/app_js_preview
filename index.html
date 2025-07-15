@@ -1,0 +1,153 @@
+<html>
+  <head>
+    <title>app.js</title>
+    <style>
+      :root {
+        --primary-color: #484dfc;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 15%;
+        width: 70%;
+        border: 0;
+        margin: 10px;
+        background-color: #fff;
+        border-radius: 20px;
+        color: var(--primary-color);
+        font-size: 24px;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+      }
+      .contentContainer {
+        width: 90%;
+        height: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        margin: 8px;
+        height: 100%;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cardDefault {
+        width: 10%;
+      }
+
+      .cardChosen {
+        width: 40%;
+      }
+
+      img {
+        height: 100%;
+        width: auto;
+        display: block;
+      }
+
+      .cardDefault .btn {
+        opacity: 0;
+        /* transform: translate(1000%, 100%); */
+      }
+      .imageContainer {
+        overflow: hidden;
+        position: relative;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+      }
+      .yearContainer {
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="contentContainer">
+        <div class="card cardChosen">
+          <div class="imageContainer">
+            <img src="./example2.jpg" alt="example" />
+            <button class="btn">Watch Talks on YouTube</button>
+          </div>
+          <div class="yearContainer">2025</div>
+        </div>
+        <div class="card cardDefault">
+          <div class="imageContainer">
+            <img src="./example3.jpg" alt="example" />
+            <button class="btn">Watch Talks on YouTube</button>
+          </div>
+          <div class="yearContainer">2024</div>
+        </div>
+        <div class="card cardDefault">
+          <div class="imageContainer">
+            <img src="./example2.jpg" alt="example" />
+            <button class="btn">Watch Talks on YouTube</button>
+          </div>
+          <div class="yearContainer">2023</div>
+        </div>
+        <div class="card cardDefault">
+          <div class="imageContainer">
+            <img src="./example3.jpg" alt="example" />
+            <button class="btn">Watch Talks on YouTube</button>
+          </div>
+          <div class="yearContainer">2022</div>
+        </div>
+        <div class="card cardDefault">
+          <div class="imageContainer">
+            <img src="./example2.jpg" alt="example" />
+            <button class="btn">Watch Talks on YouTube</button>
+          </div>
+          <div class="yearContainer">2021</div>
+        </div>
+        <div class="card cardDefault">
+          <div class="imageContainer">
+            <img src="./example3.jpg" alt="example" />
+            <button class="btn">Watch Talks on YouTube</button>
+          </div>
+          <div class="yearContainer">2020</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const cards = document.querySelectorAll(".card");
+      document.querySelectorAll(".card").forEach((element) => {
+        element.addEventListener("mouseenter", function () {
+          cards.forEach((el) => {
+            el.classList.remove("cardChosen");
+            el.classList.add("cardDefault");
+          });
+          this.classList.remove("cardDefault");
+          this.classList.add("cardChosen");
+        });
+      });
+    </script>
+  </body>
+</html>
