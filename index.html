@@ -20,12 +20,10 @@
       }
       .btn {
         position: absolute;
-        padding: 10px;
         top: 50%;
         left: 50%;
         width: 70%;
         border: 0;
-        margin: 10px;
         background-color: #fff;
         border-radius: 20px;
         color: var(--primary-color);
@@ -33,6 +31,15 @@
         transform: translate(-50%, -50%);
         transition: all 0.5s ease-in-out;
         cursor: pointer;
+      }
+      .btn a {
+        text-decoration: none;
+        padding: 10px;
+
+        color: var(--primary-color);
+        display: block;
+        height: 100%;
+        width: 100%;
       }
       .contentContainer {
         width: 90%;
@@ -68,6 +75,7 @@
 
       .cardDefault .btn {
         opacity: 0;
+        transform: scale(0);
       }
       .imageContainer {
         overflow: hidden;
@@ -124,42 +132,66 @@
         <div class="card cardChosen">
           <div class="imageContainer">
             <img class="image" src="./example2.jpg" alt="example" />
-            <button class="btn">Watch Talks on YouTube</button>
+            <button class="btn">
+              <a href="https://youtube.com" target="_blank"
+                >Watch Talks on YouTube</a
+              >
+            </button>
           </div>
           <div class="yearContainer">2025</div>
         </div>
         <div class="card cardDefault">
           <div class="imageContainer">
             <img class="image" src="./example3.jpg" alt="example" />
-            <button class="btn">Watch Talks on YouTube</button>
+            <button class="btn">
+              <a href="https://youtube.com" target="_blank"
+                >Watch Talks on YouTube</a
+              >
+            </button>
           </div>
           <div class="yearContainer">2024</div>
         </div>
         <div class="card cardDefault">
           <div class="imageContainer">
             <img class="image" src="./example2.jpg" alt="example" />
-            <button class="btn">Watch Talks on YouTube</button>
+            <button class="btn">
+              <a href="https://youtube.com" target="_blank"
+                >Watch Talks on YouTube</a
+              >
+            </button>
           </div>
           <div class="yearContainer">2023</div>
         </div>
         <div class="card cardDefault">
           <div class="imageContainer">
             <img class="image" src="./example3.jpg" alt="example" />
-            <button class="btn">Watch Talks on YouTube</button>
+            <button class="btn">
+              <a href="https://youtube.com" target="_blank"
+                >Watch Talks on YouTube</a
+              >
+            </button>
           </div>
           <div class="yearContainer">2022</div>
         </div>
         <div class="card cardDefault">
           <div class="imageContainer">
             <img class="image" src="./example2.jpg" alt="example" />
-            <button class="btn">Watch Talks on YouTube</button>
+            <button class="btn">
+              <a href="https://youtube.com" target="_blank"
+                >Watch Talks on YouTube</a
+              >
+            </button>
           </div>
           <div class="yearContainer">2021</div>
         </div>
         <div class="card cardDefault">
           <div class="imageContainer">
             <img class="image" src="./example3.jpg" alt="example" />
-            <button class="btn">Watch Talks on YouTube</button>
+            <button class="btn">
+              <a href="https://youtube.com" target="_blank"
+                >Watch Talks on YouTube</a
+              >
+            </button>
           </div>
           <div class="yearContainer">2020</div>
         </div>
