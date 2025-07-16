@@ -37,7 +37,6 @@
         width: 90%;
         height: 50%;
         display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -61,18 +60,18 @@
 
       img {
         height: 100%;
-        width: auto;
+        width: 100%;
+        object-fit: cover;
         display: block;
       }
 
       .cardDefault .btn {
         opacity: 0;
-        /* transform: translate(1000%, 100%); */
       }
       .imageContainer {
         overflow: hidden;
         position: relative;
-        height: 90%;
+        height: 100%;
         width: 100%;
         display: flex;
         align-items: center;
@@ -86,6 +85,35 @@
         justify-content: center;
         font-size: 24px;
         padding: 10px;
+      }
+      @media (max-width: 768px) {
+        .contentContainer {
+          width: 100%;
+          height: 1000px;
+          flex-direction: column;
+        }
+        .imageContainer {
+          width: 100%;
+          height: auto;
+        }
+        .card {
+          width: 100%;
+          height: 100px;
+          flex-direction: row;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .card {
+          margin: 0;
+        }
+        .cardChosen {
+          height: 25%;
+        }
+        .cardDefault {
+          height: 8%;
+        }
       }
     </style>
   </head>
